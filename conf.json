@@ -1,0 +1,11 @@
+{
+  "db": {
+    "client": "mysql",
+    "connection": {
+      "host": "http://sql12.freemysqlhosting.net/",
+      "user": "sql12271266",
+      "password": "ixHpthIbnF",
+      "database": "sql12271266"
+    }
+  }
+}

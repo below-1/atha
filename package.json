@@ -1,0 +1,25 @@
+{
+  "name": "atha-web-server",
+  "version": "1.0.0",
+  "description": "A web server using fastify.js",
+  "main": "index.js",
+  "author": "jordan meta",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "fastify": "^1.13.2",
+    "fastify-cookie": "^2.1.4",
+    "fastify-cors": "^0.2.0",
+    "fastify-helmet": "^3.0.0",
+    "fastify-loader": "^2.3.6",
+    "fastify-plugin": "^1.3.0",
+    "fastify-sequelize": "^1.0.4",
+    "fastify-static": "^1.0.0",
+    "knex": "^0.16.2",
+    "mysql": "^2.16.0"
+  },
+  "scripts": {
+    "dev": "node index.js",
+    "start": "node index.js"
+  }
+}
