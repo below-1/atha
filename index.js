@@ -2,6 +2,7 @@ const fastify = require('fastify')({ logger: true })
 const helmet = require('fastify-helmet')
 const fcookie = require('fastify-cookie')
 const path = require('path')
+const PORT = process.env.PORT || 5000
 
 fastify
   .register(require('fastify-cors'), {
