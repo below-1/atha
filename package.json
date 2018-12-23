@@ -21,5 +21,8 @@
   "scripts": {
     "dev": "node index.js",
     "start": "node index.js"
+  },
+  "engines": {
+    "node": "8.11.4"
   }
 }
