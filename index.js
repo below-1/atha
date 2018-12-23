@@ -23,7 +23,7 @@ fastify.register(require('./routes/auth'), { prefix: 'auth' })
 fastify.register(require('./routes/user'), { prefix: 'user' })
 fastify.register(require('./routes/smart'), { prefix: 'smart' })
 
-fastify.listen(PORT, (err, address) => {
+fastify.listen(PORT, '0.0.0.0', (err, address) => {
   if (err) {
     console.log(err)
     fastify.log.error(err)
