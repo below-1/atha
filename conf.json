@@ -2,10 +2,10 @@
   "db": {
     "client": "mysql",
     "connection": {
-      "host": "sql12.freemysqlhosting.net",
-      "user": "sql12271266",
-      "password": "ixHpthIbnF",
-      "database": "sql12271266"
+      "host": "localhost",
+      "user": "root",
+      "password": "",
+      "database": "atha_db"
     }
   }
 }

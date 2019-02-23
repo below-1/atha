@@ -31,6 +31,7 @@ module.exports = function (fastify, options, next) {
     type: 'object',
     properties: {
       name: { type: 'string' },
+      nis: { type: 'string' },
       kelas: { type: 'string' },
       rankKelas: { type: 'number' },
 
@@ -71,9 +72,10 @@ module.exports = function (fastify, options, next) {
     properties: {
       name: { type: 'string' },
       ta: { type: 'string' },
-      guru: { type: 'string' }
+      guru: { type: 'string' },
+      kelas: { type: 'string' }
     },
-    required: ['name', 'guru', 'ta']
+    required: ['name', 'guru', 'ta', 'kelas']
   }
 
   const groupSiswaEntity = {

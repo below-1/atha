@@ -16,8 +16,6 @@ module.exports = async (fastify, options) => {
     method: 'POST',
     url: '/group-siswa',
     schema: {
-      body: 'groupSiswa#',
-
       response: {
         200: {
           type: 'object',
@@ -33,7 +31,9 @@ module.exports = async (fastify, options) => {
     },
     handler: async (request, reply) => {
       let gs = request.body
-      let gsWithId = { ...gs, user_id: request.query.userId }
+      const statWeights = { weights: [ 0.5, 0.2, 0.15, 0.1, 0.05 ] }
+      const weightString = JSON.stringify(statWeights)
+      let gsWithId = { ...gs, user_id: request.query.userId, properties: weightString }
       let result = await groupSiswaRepo.add(gsWithId)
       let id = result[0]
 
