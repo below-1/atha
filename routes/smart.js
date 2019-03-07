@@ -27,5 +27,26 @@ module.exports = async (fastify, options) => {
       reply.send(smResult)
     }
   })
+
+  fastify.route({
+    method: 'GET',
+    url: '/sensitivity',
+    schema: {
+      querystring: {
+        groupId: { type: 'number' }
+      }
+    },
+    handler: async (request, reply) => {
+      let groupId = request.query.groupId
+      let weights = JSON.parse(request.query.weights)
+      let result = await gsService.findMembers(groupId)
+      result = result.map(siswaConverter.dbToFastify)
+
+
+      let smResult = smart(result, weights)
+
+      reply.send(smResult)
+    }
+  })
   
 };

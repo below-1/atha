@@ -51,6 +51,10 @@ function critsValueByOp (items, op) {
 }
 
 module.exports = (items, weights) => {
+  // const weights = JSON.parse(_weights).map(v => {
+  //   return parseFloat(v)
+  // })
+
   const min = (a, b) => a < b
   const max = (a, b) => a > b
 
